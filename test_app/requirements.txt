@@ -17,11 +17,11 @@ pycparser==2.21
 pyelftools==0.30
 pyserial==3.5
 pytest==7.4.4
-pytest-embedded==1.6.2
-pytest-embedded-idf==1.6.2
-pytest-embedded-serial==1.6.2
-pytest-embedded-serial-esp==1.6.2
-pytest-embedded-wokwi==1.6.2
+pytest-embedded==1.6.3
+pytest-embedded-idf==1.6.3
+pytest-embedded-serial==1.6.3
+pytest-embedded-serial-esp==1.6.3
+pytest-embedded-wokwi==1.6.3
 PyYAML==6.0.1
 reedsolo==1.7.0
 six==1.16.0
