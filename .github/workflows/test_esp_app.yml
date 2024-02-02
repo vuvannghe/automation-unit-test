@@ -16,9 +16,9 @@ jobs:
         espidf_target: ["esp32", "esp32c3", "esp32s2", "esp32s3"]  # <--- Specify a list of Espressif chips connected to your runner
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Download files / artifacts from build job
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4
         with:
           name: test_app_bin_${{ matrix.espidf_target }}
           path: test_app/build
@@ -39,7 +39,7 @@ jobs:
             --junit-xml=./test_app_results_${{ matrix.espidf_target }}.xml \
             --target=${{ matrix.espidf_target }}
       - name: Upload test results for publish-results job
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: always()
         with:
           name: test_app_results_${{ matrix.espidf_target }}
@@ -51,10 +51,10 @@ jobs:
     if: always()  # (run even if the previous steps have failed)
     steps:
       - name: Download Test results
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           path: test_results
       - name: Publish Test Results
-        uses: EnricoMi/publish-unit-test-result-action@v1
+        uses: EnricoMi/publish-unit-test-result-action@v2
         with:
           files: test_results/**/*.xml
