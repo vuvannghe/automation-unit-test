@@ -1,19 +1,26 @@
-name: Run Test Application (HW)
+name: Run Test Application (Wokwi)
 
 on:
-  workflow_call: {}
+  workflow_call:
+    secrets:
+      WOKWI_CLI_TOKEN:
+        required: true
   workflow_dispatch: {}
 jobs:
   run-target:
-    name: Run Test App on target
-    runs-on: [self-hosted, linux, docker, "${{ matrix.espidf_target }}"]  # (expects tags with the same name as espidf_target)
-    container:
-      image: python:3.9-bullseye
-      options: --privileged  # (privileged mode has access to serial ports)
+    name: Run Test App in simulation
+    runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
-        espidf_target: ["esp32", "esp32c3", "esp32s2", "esp32s3"]  # <--- Specify a list of Espressif chips connected to your runner
+        espidf_target: 
+          - esp32
+          - esp32c3
+          - esp32c6
+          - esp32h2
+          - esp32p4
+          - esp32s2
+          - esp32s3
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -22,21 +29,22 @@ jobs:
         with:
           name: test_app_bin_${{ matrix.espidf_target }}
           path: test_app/build
+      - name: Install the Wokwi CLI
+        run: curl -L https://wokwi.com/ci/install.sh | sh
       - name: Install Python packages for PyTest
         env:
           PIP_PREFER_BINARY: true
           PIP_INDEX_URL: "https://dl.espressif.com/pypi/"
           PIP_EXTRA_INDEX_URL: "https://pypi.org/simple"
-        run: |
-          pip install \
-            pytest-embedded \
-            pytest-embedded-serial-esp \
-            pytest-embedded-idf
-      - name: Run Test App on target
+        run: pip install -r test_app/requirements.txt
+      - name: Run Test App in Wokwi Simulation
         working-directory: test_app
+        env:
+          WOKWI_CLI_TOKEN: ${{ secrets.WOKWI_CLI_TOKEN }}
         run: |
           pytest \
             --junit-xml=./test_app_results_${{ matrix.espidf_target }}.xml \
+            --embedded-services idf,wokwi \
             --target=${{ matrix.espidf_target }}
       - name: Upload test results for publish-results job
         uses: actions/upload-artifact@v4
