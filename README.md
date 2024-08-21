@@ -18,8 +18,8 @@ You can also run the tests locally. For more information, please refer to the [W
 
 ## How to setup (HW)
 
-- [GitHub Action Workflow](docs/ghub_action_workflow.md)
-- [GitHub Runner Setup](docs/ghub_runner_setup.md)
+- [GitHub Action Workflow](docs/ghub_action_workflow.md)
+- [GitHub Runner Setup](docs/ghub_runner_setup.md)
 
 ## License
 
