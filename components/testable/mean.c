@@ -4,7 +4,6 @@
 
 #include "testable.h"
 
-
 int testable_mean(const int* values, int count)
 {
     if (count == 0) {
