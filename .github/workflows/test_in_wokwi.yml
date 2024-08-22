@@ -13,7 +13,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        espidf_target: 
+        espidf_target:
           - esp32
           - esp32c3
           - esp32c6
@@ -50,7 +50,7 @@ jobs:
         uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: test_app_results_${{ matrix.espidf_target }}
+          name: test_app_results_wokwi${{ matrix.espidf_target }}
           path: test_app/*.xml
   publish-results:
     name: Publish Test App results

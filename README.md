@@ -8,7 +8,7 @@ The purpose of this project is to provide a good **starting point for customers 
 
 *You can fork and update this project according to your specific needs.*
 
-> Note: As default, the hardware testing job is `disabled`. To enable it, please see the **How to setup (HW)** documents.
+> Note: As default, the hardware testing job is `disabled`. To enable it, please see the **How to setup (HW)** documents.
 
 ## How to setup (Wokwi simulation)
 
