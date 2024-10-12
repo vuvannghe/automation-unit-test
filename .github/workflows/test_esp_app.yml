@@ -6,7 +6,7 @@ on:
 jobs:
   run-target:
     name: Run Test App on target
-    runs-on: LAPTOP-FHJ54FRF-ASUS-WINDOW  # (expects tags with the same name as espidf_target)
+    runs-on: [self-hosted, linux, docker, "${{ matrix.espidf_target }}"]  # (expects tags with the same name as espidf_target)
     container:
       image: python:3.9-bullseye
       options: --privileged  # (privileged mode has access to serial ports)
