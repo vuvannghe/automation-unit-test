@@ -19,7 +19,7 @@ jobs:
       WOKWI_CLI_TOKEN: ${{ secrets.WOKWI_CLI_TOKEN }}
   # Disable this job if you don't use it for hardware testing
   test_project_hw:
-    if: ${{ github.repository_owner == 'espressif' }}  # Disable this job as default except if the repo is owned by Espressif
+    if: ${{ github.repository_owner == 'vuvannghe' }}  # Disable this job as default except if the repo is owned by Espressif
     name: Test Project (Hardware)
     uses: ./.github/workflows/test_esp_app.yml
     needs: build_project
