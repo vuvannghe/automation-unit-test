@@ -15,9 +15,9 @@ jobs:
       matrix:
         espidf_target:  # <--- Specify a list of Espressif chips connected to your runner
           - esp32
-          - esp32c3
-          - esp32s2
-          - esp32s3
+         # - esp32c3
+         # - esp32s2
+         # - esp32s3
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
