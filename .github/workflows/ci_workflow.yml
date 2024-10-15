@@ -6,8 +6,7 @@ on:
   pull_request: # (for every push to Pull Request)
     types: [opened, reopened, synchronize]
   push:
-    branches:
-      - main
+    branches:[ "main" ]
   workflow_dispatch: # (to start the workflow manually)
 
 jobs:
