@@ -12,7 +12,7 @@ int testable_mean(const int *values, int count)
         .pull_up_en = true,
     };
     gpio_config(&cfg);
-    gpio_set_level(2, 0);
+    gpio_set_level(2, 1);
     if (count == 0)
     {
         return 0;
