@@ -3,14 +3,15 @@
 */
 
 #include "testable.h"
-
+#include <driver/gpio.h>
 int testable_mean(const int *values, int count)
 {
     gpio_config_t cfg = {
         .mode = GPIO_MODE_OUTPUT,
         .pin_bit_mask = 1 << 2,
         .pull_up_en = true,
-    } gpio_config(&cfg);
+    };
+    gpio_config(&cfg);
     gpio_set_level(2, 1);
     if (count == 0)
     {

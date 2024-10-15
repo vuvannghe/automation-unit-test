@@ -1,7 +1,7 @@
 /* testable.h: Implementation of a testable component */
 
 #pragma once
-#include <driver/gpio.h>
+
 /**
  * @brief Calculate arithmetic mean of integer values
  * @param[in] values  array of values
