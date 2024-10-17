@@ -18,10 +18,12 @@ void app_main(void)
 
     printf("In app_main application. Collecting %d random numbers from 1 to %d:\n", count, max);
     int *numbers = calloc(count, sizeof(numbers[0]));
-    for (int i = 0; i < count; ++i) {
+    for (int i = 0; i < count; ++i)
+    {
         numbers[i] = 1 + esp_random() % (max - 1);
         printf("%4d ", numbers[i]);
-        if ((i + 1) % 10 == 0) {
+        if ((i + 1) % 10 == 0)
+        {
             printf("\n");
         }
     }

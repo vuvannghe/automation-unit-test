@@ -60,4 +60,6 @@ E:/esp5.1/automation-unit-test/build/esp-idf/perfmon/libperfmon.a
 E:/esp5.1/automation-unit-test/build/esp-idf/spiffs/libspiffs.a
 E:/esp5.1/automation-unit-test/build/esp-idf/wifi_provisioning/libwifi_provisioning.a
 E:/esp5.1/automation-unit-test/build/esp-idf/main/libmain.a
+E:/esp5.1/automation-unit-test/build/esp-idf/i2cdev/libi2cdev.a
+E:/esp5.1/automation-unit-test/build/esp-idf/pcf8574/libpcf8574.a
 E:/esp5.1/automation-unit-test/build/esp-idf/testable/libtestable.a

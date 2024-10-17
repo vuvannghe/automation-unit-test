@@ -409,6 +409,21 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("E:/esp5.1/automation-unit-test/build/esp-idf/esp_idf_lib_helpers/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("E:/esp5.1/automation-unit-test/build/esp-idf/i2cdev/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("E:/esp5.1/automation-unit-test/build/esp-idf/pcf8574/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("E:/esp5.1/automation-unit-test/build/esp-idf/testable/cmake_install.cmake")
 endif()
 

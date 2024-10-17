@@ -4402,6 +4402,54 @@
     {
         "children": [
             {
+                "children": [],
+                "depends_on": null,
+                "help": "GPIO number for I2C Master clock line.",
+                "id": "PCF_PIN_NUM_SCL",
+                "name": "PCF_PIN_NUM_SCL",
+                "range": null,
+                "title": "PCF SCL PIN Number",
+                "type": "int"
+            },
+            {
+                "children": [],
+                "depends_on": null,
+                "help": "GPIO number for I2C Master data line.",
+                "id": "PCF_PIN_NUM_SDA",
+                "name": "PCF_PIN_NUM_SDA",
+                "range": null,
+                "title": "PCF SDA PIN Number",
+                "type": "int"
+            },
+            {
+                "children": [],
+                "depends_on": null,
+                "help": "I2C port for IC PCF8574.",
+                "id": "PCF_I2C_PORT",
+                "name": "PCF_I2C_PORT",
+                "range": null,
+                "title": "I2C Port",
+                "type": "int"
+            },
+            {
+                "children": [],
+                "depends_on": null,
+                "help": "I2C frequency.",
+                "id": "PCF_I2C_FREQ_HZ",
+                "name": "PCF_I2C_FREQ_HZ",
+                "range": null,
+                "title": "Frequency I2C",
+                "type": "int"
+            }
+        ],
+        "depends_on": null,
+        "id": "pcf8574-configuration",
+        "title": "PCF8574 configuration",
+        "type": "menu"
+    },
+    {
+        "children": [
+            {
                 "children": [
                     {
                         "children": [],
@@ -24423,6 +24471,37 @@
                 "depends_on": null,
                 "id": "component-config-wi-fi-provisioning-manager",
                 "title": "Wi-Fi Provisioning Manager",
+                "type": "menu"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": null,
+                        "id": "I2CDEV_TIMEOUT",
+                        "name": "I2CDEV_TIMEOUT",
+                        "range": [
+                            10,
+                            5000
+                        ],
+                        "title": "I2C transaction timeout, milliseconds",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Attention! After enabling this option, all I2C device\ndrivers will become non-thread safe. \nUse this option if you need to access your I2C devices\nfrom interrupt handlers.",
+                        "id": "I2CDEV_NOLOCK",
+                        "name": "I2CDEV_NOLOCK",
+                        "range": null,
+                        "title": "Disable the use of mutexes",
+                        "type": "bool"
+                    }
+                ],
+                "depends_on": null,
+                "id": "component-config-i2c",
+                "title": "I2C",
                 "type": "menu"
             }
         ],
