@@ -4452,6 +4452,54 @@
             {
                 "children": [],
                 "depends_on": null,
+                "help": "GPIO number for TX.",
+                "id": "PMS_PIN_TX",
+                "name": "PMS_PIN_TX",
+                "range": null,
+                "title": "TX GPIO Number",
+                "type": "int"
+            },
+            {
+                "children": [],
+                "depends_on": null,
+                "help": "GPIO number for RX.",
+                "id": "PMS_PIN_RX",
+                "name": "PMS_PIN_RX",
+                "range": null,
+                "title": "RX GPIO Number",
+                "type": "int"
+            },
+            {
+                "children": [],
+                "depends_on": null,
+                "help": "UART baudrate.",
+                "id": "UART_BAUD_RATE",
+                "name": "UART_BAUD_RATE",
+                "range": null,
+                "title": "UART baudrate",
+                "type": "int"
+            },
+            {
+                "children": [],
+                "depends_on": null,
+                "help": "UART port for PMS sensor.",
+                "id": "PMS_UART_PORT",
+                "name": "PMS_UART_PORT",
+                "range": null,
+                "title": "Uart Port",
+                "type": "int"
+            }
+        ],
+        "depends_on": null,
+        "id": "pms7003-configuration",
+        "title": "PMS7003 configuration",
+        "type": "menu"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "depends_on": null,
                 "help": "GPIO number for I2C Master clock line.",
                 "id": "RTC_PIN_NUM_SCL",
                 "name": "RTC_PIN_NUM_SCL",
