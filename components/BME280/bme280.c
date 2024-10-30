@@ -37,18 +37,38 @@ esp_err_t bme280_readSensorData(bme280 *bme280_device, float *temperature,
 {
     bmp280_read_float(bme280_device, temperature, pressure, humidity);
 
-    if ((*temperature < -40 || *temperature > 85)   ||
-        (*pressure < 30000  || *pressure > 110000)  ||
-        (*humidity < 0      || *humidity > 100  ) )
+    if ((*temperature < -40 || *temperature > 85) ||
+        (*pressure < 30000 || *pressure > 110000) ||
+        (*humidity < 0 || *humidity > 100))
     {
         *temperature = TEMPERATURE_VALUE_INVALID;
-        *pressure    = PRESSURE_VALUE_INVALID;
-        *humidity    = HUMIDITY_VALUUE_INVALID;
+        *pressure = PRESSURE_VALUE_INVALID;
+        *humidity = HUMIDITY_VALUUE_INVALID;
 
         ESP_LOGE(__func__, "BME280 sensor read data failed.");
         return ESP_ERROR_BME_READ_DATA_FAILED;
-    } else {
+    }
+    else
+    {
         ESP_LOGI(__func__, "BME280 sensor read data successful.");
         return ESP_OK;
+    }
+}
+
+void bubble_sort(int *a, int n)
+{
+    int i;
+    int j, temp;
+    for (i = 0; i < n - 1; i++)
+    {
+        for (j = 0; j < n - i - 1; j++)
+        {
+            if (*(a + j) > *(a + j + 1))
+            {
+                temp = *(a + j);
+                *(a + j) = *(a + j + 1);
+                *(a + j + 1) = temp;
+            }
+        }
     }
 }

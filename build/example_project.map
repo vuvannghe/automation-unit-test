@@ -7659,6 +7659,7 @@ LOAD esp-idf/BMP280/libBMP280.a
 LOAD esp-idf/BME280/libBME280.a
 LOAD esp-idf/DS3231/libDS3231.a
 LOAD esp-idf/DataManager/libDataManager.a
+LOAD esp-idf/FileManager/libFileManager.a
 LOAD esp-idf/PMS7003/libPMS7003.a
 LOAD esp-idf/SNTP_Sync/libSNTP_Sync.a
 LOAD esp-idf/Time/libTime.a
@@ -7672,9 +7673,6 @@ LOAD esp-idf/esp_hid/libesp_hid.a
 LOAD esp-idf/esp_lcd/libesp_lcd.a
 LOAD esp-idf/esp_local_ctrl/libesp_local_ctrl.a
 LOAD esp-idf/espcoredump/libespcoredump.a
-LOAD esp-idf/fatfs/libfatfs.a
-LOAD esp-idf/wear_levelling/libwear_levelling.a
-LOAD esp-idf/sdmmc/libsdmmc.a
 LOAD esp-idf/mqtt/libmqtt.a
 LOAD esp-idf/perfmon/libperfmon.a
 LOAD esp-idf/spiffs/libspiffs.a
@@ -7684,6 +7682,9 @@ LOAD esp-idf/console/libconsole.a
 LOAD esp-idf/protobuf-c/libprotobuf-c.a
 LOAD esp-idf/json/libjson.a
 LOAD esp-idf/BMP280/libBMP280.a
+LOAD esp-idf/fatfs/libfatfs.a
+LOAD esp-idf/wear_levelling/libwear_levelling.a
+LOAD esp-idf/sdmmc/libsdmmc.a
 LOAD esp-idf/DS3231/libDS3231.a
 LOAD esp-idf/i2cdev/libi2cdev.a
 LOAD esp-idf/xtensa/libxtensa.a

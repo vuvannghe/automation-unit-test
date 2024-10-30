@@ -349,6 +349,15 @@ CONFIG_BME_I2C_FREQ_HZ=400000
 # end of BME configuration
 
 #
+# SD Card menu
+#
+CONFIG_PIN_NUM_MOSI=19
+CONFIG_PIN_NUM_MISO=21
+CONFIG_PIN_NUM_CLK=18
+CONFIG_PIN_NUM_CS=5
+# end of SD Card menu
+
+#
 # PMS7003 configuration
 #
 CONFIG_PMS_PIN_TX=17

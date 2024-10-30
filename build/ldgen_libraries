@@ -65,6 +65,7 @@ E:/esp5.1/automation-unit-test/build/esp-idf/BMP280/libBMP280.a
 E:/esp5.1/automation-unit-test/build/esp-idf/BME280/libBME280.a
 E:/esp5.1/automation-unit-test/build/esp-idf/DS3231/libDS3231.a
 E:/esp5.1/automation-unit-test/build/esp-idf/DataManager/libDataManager.a
+E:/esp5.1/automation-unit-test/build/esp-idf/FileManager/libFileManager.a
 E:/esp5.1/automation-unit-test/build/esp-idf/PMS7003/libPMS7003.a
 E:/esp5.1/automation-unit-test/build/esp-idf/SNTP_Sync/libSNTP_Sync.a
 E:/esp5.1/automation-unit-test/build/esp-idf/Time/libTime.a
